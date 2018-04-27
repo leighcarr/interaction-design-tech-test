@@ -1,14 +1,134 @@
-body {
-	// background: black;
+/* $VARIABLES */
+
+$blue: #153F8E;
+$darkBlue: #132C6C;
+$white: #ffffff;
+$yellow: #ffe600;
+$gray: #484848;
+$lightGrey: #dde3ea;
+
+/* font-url variable for the location of the raw font files */
+$font-url: "../fonts"!default;
+
+$SkyRegular: 'SkyRegular', Arial, Verdana, sans-serif;
+$SkyMedium: 'SkyMedium', Arial, Verdana, sans-serif;
+$SkyBold: 'SkyBold', 'Arial Bold', Arial, Verdana, sans-serif;
+
+* {
+	box-sizing: border-box;
 }
+
+body {
+	font-family: $SkyRegular;
+}
+
+table {
+	 border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.container {
+	background: $darkBlue;
+	max-width: 800px;
+	margin: 0 auto;
+	border: 1px solid $lightGrey;
+	padding: 40px;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: $SkyMedium;
+    color: $white;
+
+}
+
+// Bet table
+
+#bet-list {
+	background: $white;
+	margin: 0 auto;
+	width: 100%;
+	color: $white;
+
+	.bet__event {
+		font-family: $SkyMedium;
+	}
+
+	.bet__odds {
+		background: $yellow;
+		border-bottom: 1px solid $white;
+		font-family: $SkyMedium;
+		cursor: pointer;
+	}
+}
+
+#bet-list caption {
+	margin-bottom: 20px;
+}
+
+#bet-list tr {
+	color: $gray;
+	padding: 20px;
+}
+
+#bet-list td {
+	color: $gray;
+	padding: 20px;
+	border-bottom: 1px solid $lightGrey;
+}
+
+
 
 // Grid System
 
-// fonts 
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
 
-/* $VARIABLES */
-/* font-url variable for the location of the raw font files */
-$font-url: "../fonts"!default;
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+
+/*  GROUPING  */
+.group:before,
+.group:after {
+	content:"";
+	display:table;
+}
+.group:after {
+	clear:both;
+}
+.group {
+    zoom:1; /* For IE 6/7 */
+}
+
+/*  GRID OF THREE  */
+.span_3_of_3 {
+	width: 100%;
+}
+.span_2_of_3 {
+	width: 66.1%;
+}
+.span_1_of_3 {
+	width: 32.2%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.col { margin: 1% 0 1% 0%;}
+	.span_3_of_3, .span_2_of_3, .span_1_of_3 { width: 100%; }
+}
+
+
+// fonts 
 
 @font-face {
     font-family: SkyRegular;
@@ -34,18 +154,50 @@ $font-url: "../fonts"!default;
     font-style: normal
 }
 
-@font-face {
-    font-family: Skycons;
-    src: url("#{$font-url}/skycons/skycons-2.0.13.eot");
-    src: local("â˜º"),url("#{$font-url}/skycons-2.0.13.woff") format("woff"),url("#{$font-url}/skycons/skycons-2.0.13.ttf") format("truetype"),url("#{$font-url}/skycons/skycons-2.0.13.svg#Skycons") format("svg");
-    font-weight: normal;
-    font-style: normal;
+// Animations
+
+.spinner {
+    -webkit-animation-name: spinner;
+    -webkit-animation-duration: 1.2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-name: spinner;
+    animation-duration: 1.2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    width: 128px;
 }
 
-$SkyRegular: 'SkyRegular', Arial, Verdana, sans-serif;
-$SkyMedium: 'SkyMedium', Arial, Verdana, sans-serif;
-$SkyBold: 'SkyBold', 'Arial Bold', Arial, Verdana, sans-serif;
+@keyframes spinner {
+    from {
+        transform: rotate(0deg);
+    }
 
-h1, h2, h3, h4, h5, p {
-    font-family: $SkyBold;
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spinner {
+     from {
+         transform: rotate(0deg);
+     }
+
+     to {
+         transform: rotate(360deg);
+     }
+ }
+
+.js-toggle {
+    cursor: pointer;
+}
+
+.is-hidden {
+    display: none;
+}
+
+// Helpers 
+
+.central {
+	text-align: center;
 }

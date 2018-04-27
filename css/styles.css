@@ -1,6 +1,97 @@
 @charset "UTF-8";
 /* $VARIABLES */
 /* font-url variable for the location of the raw font files */
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: "SkyRegular", Arial, Verdana, sans-serif; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.container {
+  background: #132C6C;
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid #dde3ea;
+  padding: 40px; }
+
+h1, h2, h3, h4, h5 {
+  font-family: "SkyMedium", Arial, Verdana, sans-serif;
+  color: #ffffff; }
+
+#bet-list {
+  background: #ffffff;
+  margin: 0 auto;
+  width: 100%;
+  color: #ffffff; }
+  #bet-list .bet__event {
+    font-family: "SkyMedium", Arial, Verdana, sans-serif; }
+  #bet-list .bet__odds {
+    background: #ffe600;
+    border-bottom: 1px solid #ffffff;
+    font-family: "SkyMedium", Arial, Verdana, sans-serif;
+    cursor: pointer; }
+
+#bet-list caption {
+  margin-bottom: 20px; }
+
+#bet-list tr {
+  color: #484848;
+  padding: 20px; }
+
+#bet-list td {
+  color: #484848;
+  padding: 20px;
+  border-bottom: 1px solid #dde3ea; }
+
+/*  SECTIONS  */
+.section {
+  clear: both;
+  padding: 0px;
+  margin: 0px; }
+
+/*  COLUMN SETUP  */
+.col {
+  display: block;
+  float: left;
+  margin: 1% 0 1% 1.6%; }
+
+.col:first-child {
+  margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after {
+  content: "";
+  display: table; }
+
+.group:after {
+  clear: both; }
+
+.group {
+  zoom: 1;
+  /* For IE 6/7 */ }
+
+/*  GRID OF THREE  */
+.span_3_of_3 {
+  width: 100%; }
+
+.span_2_of_3 {
+  width: 66.1%; }
+
+.span_1_of_3 {
+  width: 32.2%; }
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+@media only screen and (max-width: 480px) {
+  .col {
+    margin: 1% 0 1% 0%; }
+  .span_3_of_3, .span_2_of_3, .span_1_of_3 {
+    width: 100%; } }
+
 @font-face {
   font-family: SkyRegular;
   src: url("../fonts/skyreg-webfont.eot");
@@ -22,12 +113,34 @@
   font-weight: 400;
   font-style: normal; }
 
-@font-face {
-  font-family: Skycons;
-  src: url("../fonts/skycons/skycons-2.0.13.eot");
-  src: local("â˜º"), url("../fonts/skycons-2.0.13.woff") format("woff"), url("../fonts/skycons/skycons-2.0.13.ttf") format("truetype"), url("../fonts/skycons/skycons-2.0.13.svg#Skycons") format("svg");
-  font-weight: normal;
-  font-style: normal; }
+.spinner {
+  -webkit-animation-name: spinner;
+  -webkit-animation-duration: 1.2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-name: spinner;
+  animation-duration: 1.2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  width: 128px; }
 
-h1, h2, h3, h4, h5, p {
-  font-family: "SkyBold", "Arial Bold", Arial, Verdana, sans-serif; }
+@keyframes spinner {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+@-webkit-keyframes spinner {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+.js-toggle {
+  cursor: pointer; }
+
+.is-hidden {
+  display: none; }
+
+.central {
+  text-align: center; }

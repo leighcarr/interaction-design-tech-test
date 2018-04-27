@@ -7,68 +7,29 @@
     <script src="js/main.js" defer></script>
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <style>
-        .spinner {
-            -webkit-animation-name: spinner;
-            -webkit-animation-duration: 1.2s;
-            -webkit-animation-iteration-count: infinite;
-            -webkit-animation-timing-function: linear;
-            animation-name: spinner;
-            animation-duration: 1.2s;
-            animation-timing-function: linear;
-            animation-iteration-count: infinite;
-            width: 128px;
-        }
-
-        @keyframes spinner {
-            from {
-                transform: rotate(0deg);
-            }
-
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-        @-webkit-keyframes spinner {
-             from {
-                 transform: rotate(0deg);
-             }
-
-             to {
-                 transform: rotate(360deg);
-             }
-         }
-
-        .js-toggle {
-            cursor: pointer;
-        }
-
-        .is-hidden {
-            display: none;
-        }
-    </style>
 </head>
 <body>
-<h1>Sky Betting and Gaming Interaction Design Test</h1>
+<div class="container">
+    <h1 class="central">Sky Betting and Gaming Interaction Design Test</h1>
 
-<table id="bet-list">
-    <caption>Available Bets</caption>
-    <tbody id="bets">
-    <tr>
-        <td><img src="img/spinner.gif" alt="" class="spinner"/></td>
-    </tr>
-    </tbody>
-</table>
+    <table id="bet-list">
+        <caption>Available Bets</caption>
+        <tbody id="bets">
+        <tr>
+            <td><img src="img/spinner.gif" alt="" class="spinner"/></td>
+        </tr>
+        </tbody>
+    </table>
 
-<div id="betslip">
-    <h1 class="js-toggle">Your Betslip</h1>
-    <div id="selections" class="js-toggle-target"></div>
-</div>
+    <div id="betslip">
+        <h1 class="js-toggle central">Your Betslip</h1>
+        <div id="selections" class="js-toggle-target"></div>
+    </div>
 
-<div>
-    <h1 class="js-toggle">Your Receipts</h1>
-    <div id="receipts" class="js-toggle-target"></div>
+    <div>
+        <h1 class="js-toggle central">Your Receipts</h1>
+        <div id="receipts" class="js-toggle-target"></div>
+    </div>
 </div>
 
 <script type="text/template" id="bet">
