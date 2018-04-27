@@ -1,2 +1,33 @@
-body {
-  background: black; }
+@charset "UTF-8";
+/* $VARIABLES */
+/* font-url variable for the location of the raw font files */
+@font-face {
+  font-family: SkyRegular;
+  src: url("../fonts/skyreg-webfont.eot");
+  src: local("â˜º"), url("../fonts/skyreg-webfont.woff") format("woff"), url("../fonts/sky/skyreg-webfont.ttf") format("truetype"), url("../fonts/sky/skyreg-webfont.svg#SkyRegular") format("svg");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: SkyMedium;
+  src: url("../fonts/skymed-webfont.eot");
+  src: local("â˜º"), url("../fonts/skymed-webfont.woff") format("woff"), url("../fonts/sky/skymed-webfont.ttf") format("truetype"), url("../fonts/sky/skymed-webfont.svg#SkyMedium") format("svg");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: SkyBold;
+  src: url("../fonts/sky/skybold-webfont.eot");
+  src: local("â˜º"), url("../fonts/skybold-webfont.woff") format("woff"), url("../fonts/sky/skybold-webfont.ttf") format("truetype"), url("../fonts/sky/skybold-webfont.svg#SkyBold") format("svg");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: Skycons;
+  src: url("../fonts/skycons/skycons-2.0.13.eot");
+  src: local("â˜º"), url("../fonts/skycons-2.0.13.woff") format("woff"), url("../fonts/skycons/skycons-2.0.13.ttf") format("truetype"), url("../fonts/skycons/skycons-2.0.13.svg#Skycons") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+h1, h2, h3, h4, h5, p {
+  font-family: "SkyBold", "Arial Bold", Arial, Verdana, sans-serif; }
