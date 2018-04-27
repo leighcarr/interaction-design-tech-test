@@ -33,7 +33,13 @@ h1, h2, h3, h4, h5 {
     background: #ffe600;
     border-bottom: 1px solid #ffffff;
     font-family: "SkyMedium", Arial, Verdana, sans-serif;
-    cursor: pointer; }
+    cursor: pointer;
+    -webkit-transition: width .3s;
+    /* Safari */
+    transition: all .3s; }
+    #bet-list .bet__odds:hover {
+      background: #153F8E;
+      color: #ffffff; }
 
 #bet-list caption {
   margin-bottom: 20px; }
@@ -46,6 +52,44 @@ h1, h2, h3, h4, h5 {
   color: #484848;
   padding: 20px;
   border-bottom: 1px solid #dde3ea; }
+
+#selections {
+  background: #ffffff;
+  margin: 0 auto;
+  width: 100%;
+  color: #153F8E; }
+  #selections table {
+    width: 100%; }
+  #selections td {
+    color: #484848;
+    padding: 10px;
+    border-bottom: 1px solid #dde3ea; }
+  #selections .caption {
+    width: 100%; }
+  #selections button {
+    background-color: #ffe600;
+    border: none;
+    color: #153F8E;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    font-family: "SkyBold", "Arial Bold", Arial, Verdana, sans-serif;
+    width: 100%; }
+  #selections h4 {
+    color: #153F8E;
+    display: block;
+    padding: 10px 10px 0 10px;
+    margin: 0; }
+
+#receipts {
+  background: #ffffff;
+  margin: 0 auto;
+  width: 100%;
+  color: #153F8E; }
+  #receipts table {
+    width: 100%; }
 
 /*  SECTIONS  */
 .section {
